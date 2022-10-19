@@ -4,9 +4,12 @@ import "./index.css";
 import App from "./App";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import  usersReducer from '../src/features/Users'
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    user:usersReducer
+  },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -1,8 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-export const slice = createSlice({
+import { UsersData } from "../FakeData";
+export const userSlice = createSlice({
   name: "users",
   initialState: {
-    value: [],
-  }, 
+    value: UsersData,
+  },
+  reducers: {
+    addUser: (state, action) => {
+      //write code for adding a new user
+    },
+  },
 });
+
+export default userSlice.reducer;
